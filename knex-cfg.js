@@ -9,13 +9,15 @@ module.exports =
             user: 'postgres',
             database: 'book-test-pgadmin',
             password: 'postgrespassword'
-        }
+        },
+        debut: true
     },
     sqlite : 
     {
         client: "sqlite3",
         connection: {
             filename: "./book.sqlite"
-        }
+        },
+        debug: true
     }
 };

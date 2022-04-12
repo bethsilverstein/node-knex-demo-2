@@ -1,4 +1,4 @@
-var cfg = require("./knex-cfg").sqlite; //change .pg to .sqlite if wanted
+var cfg = require("./knex-cfg").sqlite; // either .sqlite or .pg to change which kind of database it is (or others if there are other dbs)
 var screen = require("./screen");
 var knex = require("knex")(cfg);
 
@@ -18,6 +18,10 @@ screen.clear()
 //     console.log('done with author query');
 // })
 
+//var query = knex.select("title", "rating").from("book");
+//var sql = query.toString();
+//var sql = query.toSQL();
+//screen.write(sql);
 
 knex.select("title", "rating").from("book").asCallback(function(err, rows) {
     if (err) {
