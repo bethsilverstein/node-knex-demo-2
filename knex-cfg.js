@@ -10,7 +10,7 @@ module.exports =
             database: 'book-test-pgadmin',
             password: 'postgrespassword'
         },
-        debut: true
+        debug: true
     },
     sqlite : 
     {
